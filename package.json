@@ -27,7 +27,7 @@
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
     "production": "NODE_ENV=production npm-run-all setup eleventy",
     "snapshots": "percy snapshot ./tests/visual/fixtures/dist/en",
-    "percy": "NODE_ENV=visual-test cd tests && npx rollup -c && cd tests/visual/fixtures && gulp && eleventy && npm run snapshots",
+    "percy": "cd tests && npx rollup -c && cd visual/fixtures && gulp && eleventy && NODE_ENV=visual-test npm run snapshots",
     "rollup:watch": "chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "rollup": "npx rollup -c",
     "stage:personal": "NODE_ENV=production npm run production && gcloud app deploy --project=web-dev-staging --quiet --no-promote",
