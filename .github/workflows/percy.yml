@@ -5,19 +5,29 @@ on:
     branches:
       - main
     paths:
-      - '**.js'
       - 'package.json'
-      - '**.njk'
-      - '**.scss'
-      - '**.yml'
+      - 'site/_filters/**.js'
+      - 'site/_includes/**'
+      - 'site/_js/**.js'
+      - 'site/_plugins/**.js'
+      - 'site/_scss/**.scss'
+      - 'site/_shortcodes/**.js'
+      - 'site/_transforms/**.js'
+      - 'site/_utils/**.js'
+      - 'tests/visual/fixtures/site/**'
 
   pull_request:
     paths:
-      - '**.js'
       - 'package.json'
-      - '**.njk'
-      - '**.scss'
-      - '**.yml'
+      - 'site/_filters/**.js'
+      - 'site/_includes/**'
+      - 'site/_js/**.js'
+      - 'site/_plugins/**.js'
+      - 'site/_scss/**.scss'
+      - 'site/_shortcodes/**.js'
+      - 'site/_transforms/**.js'
+      - 'site/_utils/**.js'
+      - 'tests/visual/fixtures/site/**'
 
 jobs:
   percy:
