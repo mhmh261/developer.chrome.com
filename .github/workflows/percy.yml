@@ -50,4 +50,4 @@ jobs:
       - name: Percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: npm run percy
+        run: npm run snapshots
