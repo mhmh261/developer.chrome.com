@@ -32,7 +32,7 @@
     "rollup": "npx rollup -c",
     "stage:personal": "NODE_ENV=production npm run production && gcloud app deploy --project=web-dev-staging --quiet --no-promote",
     "stage": "NODE_ENV=production npm run production && gcloud app deploy --project=web-dev-staging --quiet",
-    "start": "node ./server",
+    "start": "NODE_ENV=visual-test node ./server",
     "test:watch": "ava --watch",
     "test:visuals": "gulp preTestVisuals && cd tests/visual/fixtures && NODE_ENV=production eleventy",
     "pretest": "cd tests && npx rollup -c && cd e2e/fixtures && eleventy",
@@ -98,7 +98,7 @@
     "@types/express": "^4.17.13",
     "@types/google.analytics": "^0.0.40",
     "@types/js-yaml": "^4.0.3",
-    "@types/node": "^14.17.32",
+    "@types/node": "16.11.7",
     "@types/node-fetch": "^2.5.12",
     "@types/tmp": "^0.2.0"
   },
