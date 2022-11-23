@@ -26,7 +26,7 @@
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
     "production": "NODE_ENV=production npm-run-all setup eleventy",
-    "presnapshots": "gulp preTestVisuals && cd tests/visual/fixtures && NODE_ENV=production eleventy",
+    "presnapshots": "npm run setup && gulp preTestVisuals && cd tests/visual/fixtures && NODE_ENV=production eleventy",
     "snapshots": "percy snapshot ./tests/visual/fixtures/dist",
     "percy": "npm run test:visuals && npm run snapshots",
     "rollup:watch": "chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
